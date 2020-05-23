@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/base.css">
+    <script src="https://kit.fontawesome.com/615d187fa1.js" crossorigin="anonymous"></script>
+    <script src="js/animations.js"></script>
+    <title>Document</title>
+</head>
+<body class="container">
+    <nav>
+        <img src="https://www.mambo.com.br/ccstore/v1/images/?source=/file/v2168637593948128623/products/131543.jpg&height=400&width=400" alt="">
+        <div class="navBotoes">
+            <a class="navBotao">Home</a>
+            <a class="navBotao">Lançamentos</a>
+            <a class="navBotao">Meus Favoritos</a>
+            <a class="navBotao">Artistas</a>
+        </div>
+        <a class="navBotao navMostrador">Tocando algo</a>
+    </nav>
+    <header>
+        <div class="mainPesquisa bg-red">
+            <input type="text">
+            <button>Pesquisar</button>
+        </div>
+            
+        <iframe src="grid.html" class="mainConteudo" frameborder="0"></iframe>
+
+        <div style="align-items: stretch;" class="mainMusgas">
+            <div id="rangeContainer" class="rangeContainer bg-red">
+                <input type="range">
+            </div>
+            <div id="mainContainer" class="mainControles bg-red">
+                <button><i class="fas fa-random" aria-hidden="true"></i></button>
+                <button><i class="fas fa-step-backward" aria-hidden="true"></i></button>
+                <button><i class="fas fa-play" aria-hidden="true"></i></button>
+                <button><i class="fas fa-step-forward" aria-hidden="true"></i></button>
+                <button><i class="fas fa-random" aria-hidden="true"></i></button>                
+            </div>
+            <div id="minimizeContainer" class="minimizeContainer bg-red">
+                <button onclick="ToggleVisibleControllers(this)"><i class="fas fa-arrow-down"></i></button>
+            </div>
+        </div>
+    </header>
+</body>
+</html>
