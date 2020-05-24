@@ -1,12 +1,24 @@
+/*Geral==================================================*/
 :root{
     --bordaPadrao: 15px;
 }
 .bg-red{
     background-color: red;
 }
+button, input{
+    outline: none;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+/*=======================================================*/
 
-
-
+/* Barra de Navegação====================================*/
 .navBotao{
     width: auto;
     padding: 10px;
@@ -24,20 +36,6 @@
     flex-direction: column;
     flex: 1;
 }
-
-.container{
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-}
-
-button, input{
-    outline: none;
-}
-
 nav{
     width: 20%;
     background-color: khaki;
@@ -50,16 +48,25 @@ nav img{
     border-radius: 50%;
     margin: 25px;
 }
+/*=======================================================*/
 
-
+/*Conteúdo===============================================*/
 header{
     width: 80%;
     background-color: lawngreen;
     display: flex;
     flex-direction: column;
 }
+.mainConteudo{
+    flex: 1;
+    overflow-y: auto;
+    padding: 5px;
+    columns: 1;
+    column-gap: 25px;
+}
+/*=======================================================*/
 
-
+/*Barra de Reprodução====================================*/
 .rangeContainer{
     display: flex; 
     align-items: center;
@@ -70,7 +77,25 @@ header{
     align-items: center;
     border-radius: 0 var(--bordaPadrao) var(--bordaPadrao) 0;
 }
+.mainMusgas{
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    right: 0;
+}
+.mainControles{
+    flex: 1;
+    justify-content: center;
+}
+.mainMusgas .mainControles{
+    display: flex;
+}
+.mainMusgas button{
+    padding: 10px;
+}
+/*=======================================================*/
 
+/*Barra de Pesquisa======================================*/
 .mainPesquisa input, button{
     margin: 15px;
     border-radius: calc(var(--bordaPadrao) - 5px);
@@ -88,46 +113,9 @@ header{
     justify-content: space-between;
     align-content: center;
 }
+/*=======================================================*/
 
-.mainMusgas{
-    position: absolute;
-    bottom: 0;
-    left: 20%;
-    right: 0;
-}
-
-.mainControles{
-    flex: 1;
-    justify-content: center;
-}
-
-
-.mainMusgas .mainControles{
-    display: flex;
-}
-
-.mainMusgas button{
-    padding: 10px;
-}
-
-.mainConteudo{
-    flex: 1;
-    overflow-y: auto;
-    padding: 5px;
-    columns: 1;
-    column-gap: 25px;
-}
-.conteudoCard{
-    background-color: sienna;
-    height: 75px;
-    width: 100%;
-    margin: 0 0 20px;
-    padding: 10px;
-    overflow: hidden;
-}
-
-/* width: 100%; display: flex; justify-content: center; */
-
+/*Responsividade da Página===============================*/
 @media (max-width: 680px){
     nav img{
         display: none;
@@ -162,3 +150,4 @@ header{
         left: 0;
     }
 }
+/*=======================================================*/
