@@ -3,7 +3,7 @@
     --bordaPadrao: 15px;
 }
 .bg-red{
-    background-color: red;
+    background-color: rgb(48, 24, 24);
 }
 button, input{
     outline: none;
@@ -22,7 +22,8 @@ button, input{
 .navBotao{
     width: auto;
     padding: 10px;
-    background-color: lightcoral;
+    background-color: rgba(88, 88, 88, 0.658);
+    color: sandybrown;
     margin: 5px;
     text-align: center;
     border-radius: var(--bordaPadrao);
@@ -31,6 +32,11 @@ button, input{
     align-items: center;
     justify-content: center;
 }
+.navBotao:hover{
+    color: gold;
+    background-color: saddlebrown;
+    transition: 0.75s;
+}
 .navBotoes{
     display: flex;
     flex-direction: column;
@@ -38,7 +44,7 @@ button, input{
 }
 nav{
     width: 20%;
-    background-color: khaki;
+    background-color: rgb(94, 53, 0);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -53,7 +59,7 @@ nav img{
 /*Conteúdo===============================================*/
 header{
     width: 80%;
-    background-color: lawngreen;
+    background-color: rgba(65, 11, 11, 0.932);
     display: flex;
     flex-direction: column;
 }

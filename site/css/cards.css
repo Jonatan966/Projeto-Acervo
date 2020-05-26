@@ -1,8 +1,14 @@
+body{
+    background-color: rgba(37, 37, 37, 0.692);
+    color: silver;
+}
+
 .cardsContainer{
     display: flex;
     align-items: center;
     flex-direction: column;
 }
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -15,10 +21,15 @@
     width: 95%;
     margin: 0 0 20px;
     padding: 10px;
-    background: #fff;
+    background: rgb(53, 53, 53);
     overflow: hidden;
     break-inside: avoid;
     border-radius: 25px;
+}
+.cardBox:hover{
+    background-color: goldenrod;
+    transition: 0.5s;
+    color: darkred;
 }
 .cardBox img{
     max-width: 100%;
