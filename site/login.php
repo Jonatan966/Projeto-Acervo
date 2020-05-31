@@ -1,4 +1,4 @@
-<button onclick="document.getElementsByClassName('loginContainer')[0].style.visibility = 'hidden'" class="btnFechar">X</button>
+<button onclick="FormLogin('hidden')" class="btnFechar">X</button>
 <main class="loginContent">
     <aside>
         <img src="" alt="">
