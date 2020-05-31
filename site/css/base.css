@@ -16,6 +16,9 @@ button, input{
     width: 100%;
     margin: 0;
 }
+iframe{
+    border-radius: calc(var(--bordaPadrao) + 5px);
+}
 /*=======================================================*/
 
 /* Barra de Navegação====================================*/
