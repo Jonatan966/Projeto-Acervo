@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/login.css">
     <script src="https://kit.fontawesome.com/615d187fa1.js" crossorigin="anonymous"></script>
     <script src="js/animations.js"></script>
     <title>Projeto Acervo - Página Principal</title>
 </head>
 <body class="container">
+    <div class="loginContainer">
+        <?php require "login.php"; ?>
+    </div>
     <nav>
         <img src="https://www.mambo.com.br/ccstore/v1/images/?source=/file/v2168637593948128623/products/131543.jpg&height=400&width=400" alt="">
         <div class="navBotoes">
+            <a onclick="document.getElementsByClassName('loginContainer')[0].style.visibility = 'visible'" class="navBotao">Fazer Login</a>
             <a class="navBotao">Home</a>
-            <a class="navBotao">Lançamentos</a>
             <a class="navBotao">Meus Favoritos</a>
             <a class="navBotao">Artistas</a>
         </div>
