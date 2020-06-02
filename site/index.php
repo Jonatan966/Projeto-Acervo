@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/login.css">
     <script src="https://kit.fontawesome.com/615d187fa1.js" crossorigin="anonymous"></script>
@@ -30,7 +31,7 @@
             <button>Pesquisar</button>
         </div>
             
-        <iframe src="http://localhost/GitHub/Projeto-Acervo/site/feed.html" class="mainConteudo" frameborder="0"></iframe>
+        <iframe name="main" src="http://localhost/GitHub/Projeto-Acervo/site/feed.php" class="mainConteudo" frameborder="0"></iframe>
 
         <div style="align-items: stretch;" class="mainMusgas">
             <div id="rangeContainer" class="rangeContainer bg-red">
