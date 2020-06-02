@@ -18,9 +18,9 @@
         <img src="https://www.mambo.com.br/ccstore/v1/images/?source=/file/v2168637593948128623/products/131543.jpg&height=400&width=400" alt="">
         <div class="navBotoes">
             <a onclick="FormLogin('visible')" class="navBotao">Fazer Login</a>
-            <a class="navBotao">Home</a>
-            <a class="navBotao">Meus Favoritos</a>
-            <a class="navBotao">Artistas</a>
+            <a onclick="PageRedirect('feed')" class="navBotao">Home</a>
+            <a onclick="PageRedirect('favs')" class="navBotao">Meus Favoritos</a>
+            <a onclick="PageRedirect('artists')" class="navBotao">Artistas</a>
         </div>
         <a class="navBotao navMostrador">Tocando algo</a>
     </nav>
