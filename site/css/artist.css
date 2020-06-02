@@ -1,0 +1,87 @@
+img{
+    width: 25px;
+}
+body{
+    display: grid;
+    grid-template-areas: 
+    "conteudoContainer descricaoContainer"
+    "albunsContainer descricaoContainer";
+    grid-template-columns: 70% 30%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.conteudoContainer {
+    grid-area: conteudoContainer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carrousel{
+    display: flex;
+    justify-content: center;
+}
+.carrousel button{
+
+}
+
+.carrousel img{
+    height: 200px;
+    width: 75%;
+    margin: 0 5px 0 5px;
+}
+
+.albunsContainer {
+    grid-area: albunsContainer;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+}
+.caixa .album{
+    width: 95%;
+    background-color: #9090F0;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5px;
+    border-radius: var(--bordaPadrao);
+}
+.caixa .album p{
+    flex: 1;
+    margin-left: 5px;
+}
+.caixa .album button{
+    height: 100%;
+}
+.caixa .album img{
+    width: 50px;
+    background-color: #6060FF66;
+}
+
+.descricaoContainer {
+    grid-area: descricaoContainer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    margin: 0 5px 5px 5px;
+}
+
+@media (max-width: 600px){
+    body{
+        grid-template-areas:
+        "conteudoContainer"
+        "albunsContainer"
+        "descricaoContainer";
+        grid-template-columns: 100%;
+    }
+    .albunsContainer, .descricaoContainer{
+        overflow-y: unset;
+    }
+}
