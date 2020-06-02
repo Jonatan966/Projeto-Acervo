@@ -1,17 +1,11 @@
-body{
-    background-color: rgba(37, 37, 37, 0.692);
-    color: silver;
-}
-
 .cardsContainer{
     display: flex;
     align-items: center;
     flex-direction: column;
+    background-color: rgba(37, 37, 37, 0.692);
+    color: silver;
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
 .flexCardsContainer{
     columns: 4;
     column-gap: 40px;

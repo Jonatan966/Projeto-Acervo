@@ -26,3 +26,9 @@ img, button, input, h1, p{
     border-radius: var(--bordaPadrao);
     font-family: monospace;
 }
+
+.tituloEstilizado{
+    width: 95%;
+    background-color: gray;
+    text-align: center;
+}
