@@ -1,12 +1,18 @@
 ::-webkit-scrollbar {
-    display: none;
+    /*display: none;*/
 }
-
+body{
+    justify-content: center;
+    display: flex;
+}
 :root{
     --bordaPadrao: 15px;
 }
 .bg-red{
     background-color: rgb(48, 24, 24);
+}
+a {
+    text-decoration: none;
 }
 button, input{
     outline: none;
@@ -31,4 +37,14 @@ img, button, input, h1, p{
     width: 95%;
     background-color: gray;
     text-align: center;
+}
+
+.customBorder{
+    border-radius: var(--bordaPadrao);
+}
+
+.centerColumnBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

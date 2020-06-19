@@ -19,35 +19,41 @@
         <img src="https://www.mambo.com.br/ccstore/v1/images/?source=/file/v2168637593948128623/products/131543.jpg&height=400&width=400" alt="">
         <div class="navBotoes">
             <a onclick="FormLogin('visible')" class="navBotao">Fazer Login</a>
-            <a onclick="PageRedirect('feed')" class="navBotao">Home</a>
-            <a onclick="PageRedirect('favs')" class="navBotao">Meus Favoritos</a>
-            <a onclick="PageRedirect('artists')" class="navBotao">Artistas</a>
+            <a onclick="PageRedirect('feed.php')" class="navBotao">Home</a>
+            <a onclick="PageRedirect('favs.php')" class="navBotao">Meus Favoritos</a>
+            <a onclick="PageRedirect('painelCadastros.php')" class="navBotao">Cadastros</a>
         </div>
         <a class="navBotao navMostrador">Tocando algo</a>
     </nav>
     <header>
-        <div class="mainPesquisa bg-red">
-            <input type="text">
+        <form onsubmit="PageRedirect('search.php?txbPesquisa='+document.all.txbPesquisa.value+'&searchFiltro='+document.all.searchFiltro.value); return false;" class="mainPesquisa bg-red">
+            <input placeholder="Pesquise algo aqui. . ." name="txbPesquisa" type="text">
+            <label>Filtrar por: 
+                <select name="searchFiltro">
+                    <option value="ART">Artistas</option>
+                    <option value="BDS">Bandas</option>
+                    <option value="ALB">Albuns</option>
+                    <option value="MSC">Musicas</option>
+                </select>
+            </label>
             <button>Pesquisar</button>
-        </div>
+        </form>
             
         <iframe name="main" src="http://localhost/GitHub/Projeto-Acervo/site/feed.php" class="mainConteudo" frameborder="0"></iframe>
 
-        <div style="align-items: stretch;" class="mainMusgas">
+        <div style="align-items: stretch;" id="mainMusgas" class="mainMusgas bg-red">
             <div id="rangeContainer" class="rangeContainer bg-red">
                 <input type="range">
             </div>
-            <div id="mainContainer" class="mainControles bg-red">
+            <div id="mainContainer" class="mainControles">
                 <button><i class="fas fa-random" aria-hidden="true"></i></button>
                 <button><i class="fas fa-step-backward" aria-hidden="true"></i></button>
                 <button><i class="fas fa-play" aria-hidden="true"></i></button>
                 <button><i class="fas fa-step-forward" aria-hidden="true"></i></button>
                 <button><i class="fas fa-random" aria-hidden="true"></i></button>                
             </div>
-            <div id="minimizeContainer" class="minimizeContainer bg-red">
-                <button onclick="ToggleVisibleControllers(this)"><i class="fas fa-arrow-down"></i></button>
-            </div>
         </div>
+        <button class="minimizeButton" onclick="ToggleVisibleControllers(this)"><i class="fas fa-arrow-down"></i></button>
     </header>
 </body>
 </html>

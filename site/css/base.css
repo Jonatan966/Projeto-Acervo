@@ -56,18 +56,24 @@ header{
 .rangeContainer{
     display: flex; 
     align-items: center;
-    border-radius: var(--bordaPadrao) 0 0 var(--bordaPadrao);
+    border-radius: var(--bordaPadrao);
 }
-.minimizeContainer{
-    display: flex;
-    align-items: center;
-    border-radius: 0 var(--bordaPadrao) var(--bordaPadrao) 0;
+.minimizeButton{
+    position: fixed;
+    right: -5px;
+    bottom: -2.5px;
+    border-radius: var(--bordaPadrao);
+    padding: 10px;
+    border: solid;
+    border-width: 5px;
+    border-color: rgb(48, 24, 24);
 }
 .mainMusgas{
     position: absolute;
     bottom: 0;
     left: 20%;
     right: 0;
+    border-radius: var(--bordaPadrao);
 }
 .mainControles{
     flex: 1;
@@ -82,13 +88,14 @@ header{
 /*=======================================================*/
 
 /*Barra de Pesquisa======================================*/
-.mainPesquisa input, button{
+.mainPesquisa input, button, label{
     margin: 15px;
     border-radius: calc(var(--bordaPadrao) - 5px);
     border: none;
+    padding: 7.5px;
 }
 .mainPesquisa input{
-    width: 100%;
+    flex: 1;
 }
 .mainPesquisa, .mainMusgas{
     height: 60px;
@@ -96,8 +103,10 @@ header{
     flex-direction: row;
     margin: 5px;
     border-radius: var(--bordaPadrao);
-    justify-content: space-between;
-    align-content: center;
+    align-items: center;
+}
+.mainPesquisa label{
+    background: green;
 }
 /*=======================================================*/
 

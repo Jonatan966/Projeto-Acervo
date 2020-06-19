@@ -7,52 +7,26 @@
     <link rel="stylesheet" href="css/cards.css">
 </head>
 <body class="cardsContainer">
-    <div class="cardBox">
-        <img src="img/img4.jpg" alt="">
-        <h2>Title</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam cum, soluta consectetur saepe atque eos veritatis architecto quos similique voluptatum veniam doloribus impedit nesciunt accusamus? Placeat laborum laudantium nemo ab.</p>
+    <div class="cardBox centerColumnBox">
+        <h1 class="tituloEstilizado customBorder">Ultimos lançamentos</h1>
+        <h3>Albuns deste mês</h3>
     </div>
-
     <div class="flexCardsContainer">
+        <?php 
+            include_once './php/conexaoMySQL.php';
+            $feedConsulta = $oCon->query("SELECT ALBCODIGO 'Código do Álbum', ALBNOME 'Nome do Álbum', IFNULL(ARTNOME, BDSNOME) 'Interprete' "
+            . "FROM ALBUNS LEFT JOIN ARTISTAS ON ALBARTISTA = ARTCODIGO "
+            . "LEFT JOIN BANDAS ON ALBBANDA = BDSCODIGO WHERE DATE(ALBLANCAMENTO) >= DATE_SUB(NOW(), INTERVAL 30 DAY)");
+            while ($feedResult = $feedConsulta->fetch_assoc()):
+        ?>
+        
         <div class="cardBox">
-            <img src="img/img4.jpg" alt="">
-            <h2>Title</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam cum, soluta consectetur saepe atque eos veritatis architecto quos similique voluptatum veniam doloribus impedit nesciunt accusamus? Placeat laborum laudantium nemo ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quos vel eveniet necessitatibus incidunt architecto, cumque tempore, eum voluptatum dolore doloribus? Qui delectus necessitatibus voluptatibus tempore saepe odio dicta ipsum?</p>
+            <img src="img/<?php echo $feedResult["Código do Álbum"]; ?>.jpg" alt="">
+            <h2><?php echo $feedResult["Nome do Álbum"]; ?></h2>
+            <p>De: <?php echo $feedResult["Interprete"] ?></p>
         </div>
-        <div class="cardBox">
-            <img src="img/img4.jpg" alt="">
-            <h2>Title</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam cum, soluta consectetur saepe atque eos veritatis architecto quos similique voluptatum veniam doloribus impedit nesciunt accusamus? Placeat laborum laudantium nemo ab.</p>
-        </div>
-        <div class="cardBox">
-            <img src="img/img4.jpg" alt="">
-            <h2>Title</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam cum, soluta consectetur saepe atque eos veritatis architecto quos similique voluptatum veniam doloribus impedit nesciunt accusamus? Placeat laborum laudantium nemo ab.</p>
-        </div>
-
-        <div class="cardBox">
-            <img src="img/img4.jpg" alt="">
-            <h2>Title</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam cum, soluta consectetur saepe atque eos veritatis architecto quos similique voluptatum veniam doloribus impedit nesciunt accusamus? Placeat laborum laudantium nemo ab.</p>
-        </div>
-
-        <div class="cardBox">
-            <img src="img/img4.jpg" alt="">
-            <h2>Title</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam cum, soluta consectetur saepe atque eos veritatis architecto quos similique voluptatum veniam doloribus impedit nesciunt accusamus? Placeat laborum laudantium nemo ab.</p>
-        </div>
-
-        <div class="cardBox">
-            <img src="img/img4.jpg" alt="">
-            <h2>Title</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam cum, soluta consectetur saepe atque eos veritatis architecto quos similique voluptatum veniam doloribus impedit nesciunt accusamus? Placeat laborum laudantium nemo ab.</p>
-        </div>
-
-        <div class="cardBox">
-            <img src="img/img4.jpg" alt="">
-            <h2>Title</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam cum, soluta consectetur saepe atque eos veritatis architecto quos similique voluptatum veniam doloribus impedit nesciunt accusamus? Placeat laborum laudantium nemo ab.</p>
-        </div>
+        
+        <?php endwhile; ?>
     </div>
 </body>
 </html>

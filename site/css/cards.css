@@ -4,11 +4,17 @@
     flex-direction: column;
     background-color: rgba(37, 37, 37, 0.692);
     color: silver;
+    margin: 0;
+}
+.cardsSearchContainer{
+    position: absolute;
+    width: 100%;
 }
 
 .flexCardsContainer{
     columns: 4;
     column-gap: 40px;
+    flex: 1;
 }
 
 .cardBox{
@@ -19,6 +25,7 @@
     overflow: hidden;
     break-inside: avoid;
     border-radius: 25px;
+    text-align: center;
 }
 .cardBox:hover{
     background-color: goldenrod;
@@ -40,6 +47,15 @@
     font-size: 16px;
 }
 
+.searchContainer{
+    display: flex;
+    width: 95%;
+    margin: auto auto 10px auto;
+}
+.searchContainer button{
+    flex: 1;
+    padding: 10px;
+}
 
 @media (max-width:1200px){
     .flexCardsContainer{

@@ -59,6 +59,13 @@ body{
 .caixa .album button{
     height: 100%;
 }
+.caixa .album select, input[type=text], input[type=date]{
+    flex: 1;
+    margin: auto 10px auto 10px;
+}
+.caixa .album select{
+        max-width: 70%;
+}
 .caixa .album img{
     width: 50px;
     background-color: #6060FF66;
