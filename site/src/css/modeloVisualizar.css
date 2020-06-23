@@ -1,0 +1,113 @@
+.visualizerContainer{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+.visualizerContainer > .visualizerBox{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.columnContainer{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.gridCardBox{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.gridCardBox > .card{
+    width: 45%;
+    align-content: center;
+}
+.gridCardBox > .card h1{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cardBox > .card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 1;
+}
+.cardBox > .card > label{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cardBox input[type=text], 
+.cardBox input[type=number], 
+.cardBox input[type=date],
+.cardBox input[type=time],
+.cardBox button, 
+.cardBox select,  
+.cardBox textarea{
+    flex: 1;
+    margin: 2.5px;
+    width: inherit;
+}
+.cardBox > .card .fullWidth{
+    width: 100%;
+}
+
+
+.cardBox > .card > .grupoRadio{
+    margin: auto 10px auto 10px;
+    display: flex;
+    justify-content: center;
+    width: max-content;
+}
+.cardBox > .card > .grupoRadio input[type=radio]{
+    margin-left: 10px;
+}
+.cardBox > button{
+    flex: 1;
+}
+
+.horizontalBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.cardBox img{
+    width: 150px;
+    height: 150px;
+    margin: 7.5px;
+    border-radius: 15px;
+    background-color: green;
+}
+
+.visualizerContainer > section{
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 760px) {
+    .visualizerContainer{
+        flex-direction: column;
+    }
+    .visualizerContainer > .visualizerBox{
+        width: 100vw;
+    }
+    .visualizerContainer > section{
+        width: 100vw;
+    }
+    .horizontalBox{
+        flex-direction: column;
+    }
+    .cardBox > .card > label{
+        width: 90%;
+    }
+}

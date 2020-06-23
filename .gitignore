@@ -1,3 +1,5 @@
 /site/nbproject/private/
 site/old/
-site/img/*.jpg
+site/img/
+site/database/*/*.jpg
+site/database/*/*.png
