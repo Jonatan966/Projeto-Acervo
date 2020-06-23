@@ -2,3 +2,5 @@
 site/old/
 
 site/img/
+site/database/*/*.jpg
+site/database/*/*.png
