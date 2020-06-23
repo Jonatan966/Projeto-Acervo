@@ -3,51 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/login.css">
-    <script src="https://kit.fontawesome.com/615d187fa1.js" crossorigin="anonymous"></script>
-    <script src="js/animations.js"></script>
-    <script src="js/interactions.js"></script>
-    <title>Projeto Acervo - Página Principal</title>
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/generics.css">
+    <link rel="stylesheet" href="src/css/modeloVisualizar.css">
+    <link rel="stylesheet" href="src/css/home.css">
+    <title>Document</title>
 </head>
-<body class="container">
-    <div class="loginContainer">
-        <?php require "login.php"; ?>
-    </div>
-    <nav>
-        <img src="https://www.mambo.com.br/ccstore/v1/images/?source=/file/v2168637593948128623/products/131543.jpg&height=400&width=400" alt="">
-        <div class="navBotoes">
-            <a onclick="FormLogin('visible')" class="navBotao">Fazer Login</a>
-            <a onclick="PageRedirect('feed')" class="navBotao">Home</a>
-            <a onclick="PageRedirect('favs')" class="navBotao">Meus Favoritos</a>
-            <a onclick="PageRedirect('artists')" class="navBotao">Artistas</a>
+<body class=visualizerContainer>
+    <aside id="dialogoContainer">
+        <div class=estiloBox>
+            <h3 class=estiloBoxInset>Mensagem</h3>
+            Este site funciona melhor em telas maiores.
+            <br>
+            <button onClick="VisibilityChanger('dialogoContainer','hidden')" class="estiloBox fullWidth">OK</button>
         </div>
-        <a class="navBotao navMostrador">Tocando algo</a>
-    </nav>
-    <header>
-        <div class="mainPesquisa bg-red">
-            <input type="text">
-            <button>Pesquisar</button>
-        </div>
-            
-        <iframe name="main" src="http://localhost/GitHub/Projeto-Acervo/site/feed.php" class="mainConteudo" frameborder="0"></iframe>
+    </aside>
 
-        <div style="align-items: stretch;" class="mainMusgas">
-            <div id="rangeContainer" class="rangeContainer bg-red">
-                <input type="range">
+    <nav class="estiloBoxInset">
+        <img draggable=false oncontextmenu="return false;" class="estiloCircleInset hideOnPhone" src="https://www.temperosweb.com.br/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/m/i/mix-de-nuts1-1ad905eed0ea88fef215527677051390-1024-1024.jpg" alt="">
+            <h2 class="estiloBox btnBox">Login</h2>
+            <h2 onClick="PageRedirect('pages/outros/feed')" class="estiloBox btnBox">Home</h2>
+            <h2 onClick="PageRedirect('pages/registro/painelCadastros')" class="estiloBox btnBox">Cadastros</h2>
+        <h2 id="btnOcultaControles" class="estiloBox btnBox hideOnPhone">Ocultar controles</h2>
+    </nav>
+
+    <section>
+        <div class="estiloBox searchBox"><input placeholder="Pesquise algo por aqui. . ." class=estiloBoxInset type="text"><button class=estiloBox>Pesquisar</button></div>
+
+        <iframe id=main src="http://localhost/GitHub/Projeto-Acervo/site/pages/outros/feed.php" frameborder="0"></iframe>
+        
+        <aside id="cbxControles" class="estiloBox cardBox">
+            <input type="range">
+            <div>
+                <button class=estiloCircleInset>a</button>
+                <button class=estiloCircleInset>a</button>
+                <button class=estiloCircleInset>a</button>
             </div>
-            <div id="mainContainer" class="mainControles bg-red">
-                <button><i class="fas fa-random" aria-hidden="true"></i></button>
-                <button><i class="fas fa-step-backward" aria-hidden="true"></i></button>
-                <button><i class="fas fa-play" aria-hidden="true"></i></button>
-                <button><i class="fas fa-step-forward" aria-hidden="true"></i></button>
-                <button><i class="fas fa-random" aria-hidden="true"></i></button>                
-            </div>
-            <div id="minimizeContainer" class="minimizeContainer bg-red">
-                <button onclick="ToggleVisibleControllers(this)"><i class="fas fa-arrow-down"></i></button>
-            </div>
-        </div>
-    </header>
+            <label class=estiloCircleInset><marquee>Tocando n sei oq</marquee></label>
+        </aside>
+    </section>
+    <script src="src/js/interactions.js"></script>
+    <script>
+        document.all.btnOcultaControles.onclick = (event) => {
+            VisibilitySwitcher('cbxControles');
+            with(document.all.btnOcultaControles){
+                if (document.all.cbxControles.style.visibility == 'hidden'){
+                    innerText = "Mostrar Controles";
+                    style.backgroundColor = "#06c258";
+                }
+                else {
+                    innerText = "Ocultar Controles";
+                    style.backgroundColor = "#bd353b";
+                }
+            }
+        };     
+    </script>
 </body>
 </html>
