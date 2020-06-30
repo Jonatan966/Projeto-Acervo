@@ -20,9 +20,9 @@
                 <label for="">Gênero: <select name="cbxGeneroAlbum"><?php echo $listGeneros = CarregaLista("GENEROS","GNR",$oConx); ?>></select></label>
                 <label class="grupoRadio">
                     Tipo de Intérprete:
+                    <input type="radio" name="selectInterprete" value="0" checked onClick="fnPreencheLista(this.value)" id="lblColetanea"> <label for="lblColetanea">Coletânea</label> 
                     <input type="radio" name="selectInterprete" value="1" onClick="fnPreencheLista(this.value)" id="lblArtista"> <label for="lblArtista">Artista</label> 
                     <input type="radio" name="selectInterprete" value="2" onClick="fnPreencheLista(this.value)" id="lblBanda"> <label for="lblBanda">Banda</label> 
-                    <input type="radio" name="selectInterprete" value="0" onClick="fnPreencheLista(this.value)" id="lblColetanea"> <label for="lblColetanea">Coletânea</label> 
                 </label>
                 <label class="fullWidth"> Intérprete: <select name="cmbInterprete"></select> </label>
             </div>            
@@ -95,7 +95,6 @@
         }
     }
 
-    document.all.lblArtista.click();
     </script>
 </body>
 </html>
